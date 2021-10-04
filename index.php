@@ -24,7 +24,7 @@
     $errors['email'] = 'email can\'t be empty';
   }
 
-  if(!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
+  if(filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
     $errors['emailFormat'] = 'Your email isn\'t at the good format';
   }
 
